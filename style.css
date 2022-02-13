@@ -201,11 +201,11 @@ button:active {
     }
 }
 
-/* @keyframes pull {
+@keyframes pull {
   0% {transform: translateY(0);}
-  50% {transform: translateY(-2rem) scale(.9);}
+  50% {transform: translateY(-2rem);}
   100% {transform: translateY(0) scale(1);}
-} */
+}
 
 @keyframes autoSlide {
     0% {
@@ -949,6 +949,10 @@ footer li {
         --font: "Poppins", sans-serif;
         --headingText: 2.5em;
         --bodyText: .8em;
+    }
+    @keyframes pull {
+        0%{};
+        100%{};
     }
     .glass {
         width: 90%;

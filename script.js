@@ -19,9 +19,14 @@ burgerMenu.addEventListener("click", () => {
     menu.classList.toggle("activeMenu");
 })
 
+
+// THEAM TOGGLER 
 theamToggle.addEventListener("click", () => {
     body.classList.toggle("darkTheam");
-
+    theamToggle.style.animation = "pull 500ms linear";
+    setTimeout(()=>{
+        theamToggle.style.animation = "unset"
+    },510);
 })
 
 
