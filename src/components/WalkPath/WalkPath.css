@@ -1,0 +1,15 @@
+.walkPath{
+    position: relative;
+    bottom: 0;
+    width: 40000%;
+    height: 20vh;
+    background-image: url('../../assets/images/floorBrick.png');
+    background-repeat: repeat;
+    background-size: 75px;
+    /* animation: forward 9000s alternate infinite; */
+}
+/* 
+@keyframes forward {
+    0%{transform: translateX(0);}
+    100%{transform: translateX(-100%);} 
+} */

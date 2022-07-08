@@ -1,0 +1,8 @@
+.topStatContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.topStatContainer p{
+    text-align: center;
+}

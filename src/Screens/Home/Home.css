@@ -1,0 +1,36 @@
+.home .heroSection{
+    background-color:#c84c0c;
+    color: #fcbcb0;
+    width:min-content;
+    max-width: 70vw;
+    margin: 10vh auto;
+    padding: 4rem;
+    border-top: 4px solid #fcbcb0;
+    border-left: 4px solid #fcbcb0;
+    box-shadow: 4px 4px  0 black;
+    position: relative;
+}
+.home .heroSection::after,
+.home .heroSection::before{
+    content: '';
+    position: absolute;
+    width: calc(100% - 1rem - 16px);
+    height: 8px;
+    border-left: 8px solid #000;
+    border-right: 8px solid #000;
+}
+.home .heroSection::after{
+    left: .5rem;
+    top: .5rem;
+}
+.home .heroSection::before{
+    bottom: 0.5rem;
+    right: 0.5rem;
+}
+
+.heroSection p{
+    font-size: 4rem;
+}
+.heroSection span{
+    font-size: 2rem;
+}

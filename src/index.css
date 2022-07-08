@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'marioFont';
+  src:url('./assets/font/emulogic.ttf');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'marioFont';
+  /* -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+}
