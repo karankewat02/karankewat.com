@@ -7,6 +7,11 @@ function Home() {
       <div className="heroSection">
         <span>Welcome to</span><p>Karan's Portfolio</p>
       </div>
+      <div className="instruction">
+        <p>Press 'D' or '→' to move forward</p>
+        <p>Press 'A' or '←' to move Backward</p>
+        <p>Press 'Space' to jump or select</p>
+      </div>
     </div>
   )
 }

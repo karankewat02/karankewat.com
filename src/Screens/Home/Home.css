@@ -1,9 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+.home{
+    width: 100vw;
+}
 .home .heroSection{
     background-color:#c84c0c;
     color: #fcbcb0;
     width:min-content;
     max-width: 70vw;
     margin: 10vh auto;
+    margin-bottom: 2rem;
     padding: 4rem;
     border-top: 4px solid #fcbcb0;
     border-left: 4px solid #fcbcb0;
@@ -33,4 +40,10 @@
 }
 .heroSection span{
     font-size: 2rem;
+}
+.instruction{
+    /* max-height: 20vh; */
+    display: grid;
+    place-items: center;
+    margin-bottom: 2rem;
 }

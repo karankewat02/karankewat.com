@@ -1,0 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+.playerName{
+    min-height: 10vh;
+    position: relative;
+}
+.playerName img{
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    width: 100px;
+    aspect-ratio: 1;
+}
