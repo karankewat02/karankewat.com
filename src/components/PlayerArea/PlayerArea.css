@@ -3,12 +3,23 @@
 }
 .playerName{
     min-height: 10vh;
-    position: relative;
 }
 .playerName img{
+    /* outline: 4px solid red; */
     position: absolute;
-    bottom: 0;
+    bottom: 10vh;
     left: 25%;
     width: 100px;
     aspect-ratio: 1;
+}
+.jump{
+    animation: jump 500ms linear alternate infinite;
+}
+.back{
+    transform: rotateY(180deg);
+}
+
+@keyframes jump {
+    0%{transform: translateY(0);}
+    100%{transform: translateY(-15vh);}
 }

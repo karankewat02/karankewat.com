@@ -19,10 +19,11 @@ function About() {
   };
 
   return (
-    <div>
+    <div className="about">            
+      <h1 style={{marginBlock:'1rem',textAlign:'center'}}>About me</h1>
       <div className="about">
-        <p id="text"></p>
         <div className="button" onClick={typing}></div>
+        <p id="text"></p>
       </div>
     </div>
   );

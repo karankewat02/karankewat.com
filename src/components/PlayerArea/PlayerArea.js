@@ -8,15 +8,20 @@ import { useEffect } from 'react'
 
 function PlayerArea(props) {
 
+    const [playerState,setPlayerState] = useState(false)
+    const [backward,setBackward] = useState(false)
+    const [jump,setJump] = useState(false)
+  
     useEffect(()=>{
         setPlayerState(props.move)
+        setJump(props.jumping)
+        setBackward(props.backward)
     },[props])
 
-    const [playerState,setPlayerState] = useState(true)
 
   return (
     <div className='playerName'>
-        <img src={playerState?Move:still} alt="Still" />
+        <img className={`${jump?'jump':''} ${backward?'back':''}`} src={playerState?Move:still} alt="Still" />
     </div>
   )
 }

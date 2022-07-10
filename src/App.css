@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: #5c94fc;
     min-height:100vh;
@@ -12,9 +15,29 @@ body{
 }
 .screenConatiner{
     display: flex;
-    overflow: scroll;
-    /* justify-content: space-evenly; */
+    overflow-x: scroll;
 }
 .screenConatiner>div{
     min-width: 100vw;
 }
+/* 
+.bgImages>img{
+    position: absolute;
+    width: 15%;
+}
+
+.bgImages>img:nth-of-type(1){
+    bottom: 10vh;
+    left: 10vw;
+}
+
+.bgImages>img:nth-of-type(2){
+    top: 20vh;
+    left: 20vw;
+    width: 7%;
+}
+.bgImages>img:nth-of-type(3){
+    bottom: 10vh;
+    left: ;
+} */
+
