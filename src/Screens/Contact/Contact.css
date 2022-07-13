@@ -41,3 +41,29 @@
 .form form input:last-of-type{
     cursor: pointer;
 }
+
+.contact>img{
+    position: absolute;
+    z-index: -1;
+}
+
+.contact .cloud1{
+    width: 8%;
+    top: 5vh;
+    left: 10vw;
+}
+.contact .cloud3{
+    right: 12vw;
+    width: 10%;
+}
+
+.contact .cloud1-2{
+    top: 12vh;
+    left: 30%;
+    width: 5%;
+}
+.contact .grass3{
+    bottom: 0;
+    width: 15%;
+    right: 16vw;
+}

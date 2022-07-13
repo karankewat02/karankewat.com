@@ -1,0 +1,29 @@
+.Alert{
+    position: fixed;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    color: #444;
+    border-top: 4px solid #444;
+    border-left: 4px solid #444;
+    box-shadow: 0 0 15px rgba(63, 63, 63, 0.432) ,
+                4px 4px 0 black;
+    padding: 1rem 2rem;
+    z-index: 100;
+    animation-name: popup;
+    animation-duration: 4900ms;
+    animation-iteration-count: 1;
+    /* animation: popup 5s; */
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+@keyframes popup {
+    0%{opacity: 1;}
+    90%{opacity: 1;}
+    100%{opacity: 0;}
+}

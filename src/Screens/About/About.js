@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./About.css";
-
+import {cloud1,cloud2,grass2,mountainS} from '../../imgAsset'
 
 function About() {
   const typing = () => {
@@ -19,7 +19,11 @@ function About() {
   };
 
   return (
-    <div className="about">            
+    <div className="about"> 
+      <img className="cloud1" src={cloud1} alt="" />           
+      <img className="cloud2" src={cloud2} alt="" />           
+      <img className="grass2" src={grass2} alt="" />           
+      <img className="mountainS" src={mountainS} alt="" />           
       <h1 style={{marginBlock:'1rem',textAlign:'center'}}>About me</h1>
       <div className="about">
         <div className="button" onClick={typing}></div>

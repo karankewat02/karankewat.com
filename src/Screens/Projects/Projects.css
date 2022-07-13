@@ -69,3 +69,23 @@
     box-shadow: 4px 4px 0 black;
     cursor: pointer;
 }
+.projects>img{
+    position: absolute;
+    z-index: -1;
+}
+
+.projects .cloud1{
+    width: 8%;
+    top: 22vh;
+    left: 1vw;
+}
+.projects .cloud2{
+    right: 2vw;
+    top: 0;
+    width: 10%;
+}
+.projects .mountainB{
+    bottom: 0;
+    width: 12%;
+    right: 25vw;
+}

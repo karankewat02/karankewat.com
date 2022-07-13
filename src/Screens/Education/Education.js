@@ -1,5 +1,6 @@
 import React from "react";
 import "./Education.css";
+import {cloud1,cloud3,grass3,grass1} from '../../imgAsset'
 
 function Education() {
   const sclDisplay = () => {
@@ -12,8 +13,12 @@ function Education() {
   };
 
   return (
-    <div>
+    <div style={{position:'relative'}}>
       <div className="education">
+      <img className="cloud1" src={cloud1} alt="" />           
+      <img className="cloud3" src={cloud3} alt="" />           
+      <img className="grass3" src={grass3} alt="" />  
+      <img className="grass1" src={grass1} alt="" />  
         <h1 style={{marginBlock:'1rem',textAlign:'center'}}>Education Details</h1>
         <div className="options">
           <div>

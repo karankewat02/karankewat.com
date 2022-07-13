@@ -67,4 +67,28 @@
     border-left: 4px solid #444;
     box-shadow: 4px 4px 0 black;
 }
+.technologies>img{
+    position: absolute;
+    z-index: -1;
+}
 
+.technologies .cloud1{
+    width: 8%;
+    top: 12vh;
+    left: 10vw;
+}
+.technologies .cloud3{
+    right: 12vw;
+    width: 10%;
+}
+
+.technologies .cloud1-2{
+    top: 10vh;
+    left: 30%;
+    width: 5%;
+}
+.technologies .grass3{
+    bottom: 0;
+    width: 10%;
+    right: 16vw;
+}

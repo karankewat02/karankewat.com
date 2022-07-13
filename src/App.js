@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
-
+import { Waypoint } from 'react-waypoint';
 
 import Home from './Screens/Home/Home'
 import About from './Screens/About/About'
@@ -15,6 +15,7 @@ import Technologies from './Screens/Technologies/Technologies'
 import Project from './Screens/Projects/Project'
 import Conatct from './Screens/Contact/Contact'
 import Last from './Screens/Last/Last'
+import Alert from './components/Alert/Alert';
 
 // import grass1 from './assets/images/grass1.png'
 // import grass2 from './assets/images/grass2.png'
@@ -31,12 +32,21 @@ function App() {
 
   const [moving,SetMoving] = useState(false)
   const [backward,setbackward] = useState(false)
-
   const [jumping,setJumping] = useState(false)
+
   const [section,setSection] = useState('Home')
   const [sectionNo,setSectionNo] = useState(1)
 
+  const [alertMsg,setAlertMsg] = useState('');
+  useEffect(()=>{
+    setTimeout(()=>setAlertMsg(''),5000)
+  },[alertMsg])
 
+  useEffect(()=>{
+    var audio = new Audio('https://vgmsite.com/soundtracks/super-mario-bros/jlgsgtpeof/01%20Running%20About.mp3');
+    audio.loop = true;
+    audio.play();
+  },[])
 
 
   document.onkeydown = function(e){
@@ -70,26 +80,72 @@ function App() {
     }
   }   
 
-  // document.querySelector('.home').addEventListener('onmouseenter',()=>{section('Home');sectionNo(1)})
-  // document.querySelector('.about').addEventListener('onmouseenter',()=>{section('About');sectionNo(2)})
-  // document.querySelector('.home').addEventListener('onmouseenter',()=>{section(Home);sectionNo(3)})
-  // document.querySelector('.home').addEventListener('onmouseenter',()=>{section(Home);sectionNo(4)})
-  // document.querySelector('.home').addEventListener('onmouseenter',()=>{section(Home);sectionNo(5)})
-  // document.querySelector('.home').addEventListener('onmouseenter',()=>{section(Home);sectionNo(6)})
-  // document.querySelector('.home').addEventListener('onmouseenter',()=>{section(Home);sectionNo(7)})
   
   return (
     <>
       <TopStats sectionNo={sectionNo} section={section}/>
+
+      {alertMsg==''?<></>:<Alert msg={alertMsg}/>}
       
       <div className='screenConatiner'>
-        <Home/>
-        <About/>
-        <Education/>
-        <Technologies/>
-        <Project/>
-        <Conatct/>
-        <Last/>
+          <Waypoint
+            onEnter={() => {setSection('Home'); setSectionNo(1)}}
+            horizontal={true}
+            bottomOffset="50%"
+          />
+          <Home/>
+
+          <Waypoint
+            onEnter={() => {setSection('About'); setSectionNo(2);}}
+            horizontal={true}
+            bottomOffset="50%"
+          />
+          <Waypoint
+            onEnter={() => {setAlertMsg('Click the tresure Box to know more')}}
+            horizontal={true}
+            bottomOffset="70%"
+          />
+        
+          <About/>
+
+          <Waypoint
+            onEnter={() => {setSection('Education'); setSectionNo(3)}}
+            horizontal={true}
+            bottomOffset="50%"
+          />
+
+          <Education/>
+
+          <Waypoint
+            onEnter={() => {setSection('Technologies'); setSectionNo(3)}}
+            horizontal={true}
+            bottomOffset="50%"
+          />
+
+          <Technologies/>
+
+          <Waypoint
+            onEnter={() => {setSection('Project'); setSectionNo(4);setAlertMsg('Hover on the card to know more')}}
+            horizontal={true}
+            bottomOffset="50%"
+          />
+
+          <Project/>
+
+          <Waypoint
+            onEnter={() => {setSection('Contact'); setSectionNo(5)}}
+            horizontal={true}
+            bottomOffset="50%"
+          />
+
+          <Conatct/>
+
+          <Waypoint
+            onEnter={() => {setSection('Credits'); setSectionNo(6)}}
+            horizontal={true}
+            bottomOffset="50%"
+          />
+          <Last/>
       </div>
       <PlayerArea backward={backward} move={moving} jumping={jumping}/>
       <div>

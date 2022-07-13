@@ -18,10 +18,9 @@ function PlayerArea(props) {
         setBackward(props.backward)
     },[props])
 
-
   return (
     <div className='playerName'>
-        <img className={`${jump?'jump':''} ${backward?'back':''}`} src={playerState?Move:still} alt="Still" />
+        <img className={`${jump?'jump':''} ${backward?'back':''} ${playerState?'movefront':""}`} src={playerState?Move:still} alt="Still" />
     </div>
   )
 }

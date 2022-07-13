@@ -1,10 +1,15 @@
 import React from "react";
 import "./Technologies.css";
+import {cloud1,cloud3,grass3} from '../../imgAsset'
 
 function Technologies() {
   return (
-    <div>
+    <div style={{position:'relative'}}>
       <div className="technologies">
+      <img className="cloud1" src={cloud1} alt="" />           
+      <img className="cloud3" src={cloud3} alt="" />           
+      <img className="cloud1-2" src={cloud1} alt="" />  
+      <img className="grass3" src={grass3} alt="" />  
         <h1 style={{marginBlock:'1rem',textAlign:'center'}}>Technologies Worked on</h1>
         <div className="lang">
           <p>Languages</p>

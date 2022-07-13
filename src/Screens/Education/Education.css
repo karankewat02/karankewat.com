@@ -68,19 +68,28 @@
     z-index: unset;
 }
 
-/* .options>div:first-of-type:focus .detail:first-of-type{
-    display: block;
-} */
-
-/* 
-.options>div:first-of-type::after{
-    content: 'St. Gabries Sen. Sec. School Ranjhi, Jabalpur. (Class 1 to 12)';
- 
+.education>img{
+    position: absolute;
+    z-index: -1;
 }
-.options>div:nth-of-type(2)::after{
-    content: 'Gyan Ganga institue of Technology and Sciences (Btech - Computer Science)'; 
-} */
 
-/* .options>div:first-of-type:focus .options>div:first-of-type::after{
-    display: block;
-} */
+.education .cloud1{
+    width: 8%;
+    top: 12vh;
+    left: 10vw;
+}
+.education .cloud3{
+    right: 12vw;
+    width: 10%;
+}
+
+.education .grass1{
+    bottom: 0;
+    left: 30%;
+    width: 12%;
+}
+.education .grass3{
+    bottom: 0;
+    width: 10%;
+    right: 16vw;
+}

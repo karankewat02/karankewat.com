@@ -13,10 +13,16 @@
     aspect-ratio: 1;
 }
 .jump{
-    animation: jump 500ms linear alternate infinite;
+    animation: jump 500ms cubic-bezier(0.03, 0.67, 0.47, 0.88) alternate infinite;
+}
+.movefront{
+    transition-timing-function: ease;
+    transition-duration: 2000ms;
+    transform: translateX(20px);
 }
 .back{
-    transform: rotateY(180deg);
+    transition-duration: 0ms;
+    transform:rotateY(180deg);
 }
 
 @keyframes jump {

@@ -1,10 +1,14 @@
 import React from 'react'
 import './Projects.css'
+import {cloud1,cloud2,mountainB} from '../../imgAsset'
 
 function Project() {
   return (
-    <div>
+    <div style={{position:'relative'}}>
         <div className='projects'>
+            <img className="cloud1" src={cloud1} alt="" />           
+            <img className="cloud2" src={cloud2} alt="" />           
+            <img className="mountainB" src={mountainB} alt="" />  
             <h1 style={{marginBlock:'1rem',textAlign:'center'}}>Projects</h1>
             <div className="projectContainer">
 
