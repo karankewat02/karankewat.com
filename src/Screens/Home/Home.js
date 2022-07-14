@@ -1,8 +1,10 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './Home.css'
 import {cloud1,mountainB,grass3} from '../../imgAsset'
 
 function Home() {
+
+
   return (
     <div className='home'>
       <img className='cloud1' src={cloud1} alt="cloud" />

@@ -17,17 +17,6 @@ import Conatct from './Screens/Contact/Contact'
 import Last from './Screens/Last/Last'
 import Alert from './components/Alert/Alert';
 
-// import grass1 from './assets/images/grass1.png'
-// import grass2 from './assets/images/grass2.png'
-// import grass3 from './assets/images/grass3.png'
-
-// import cloud1 from './assets/images/cloud1.png'
-// import cloud2 from './assets/images/cloud2.png'
-// import cloud3 from './assets/images/cloud3.png'
-
-// import mountainS from './assets/images/mountainS.png'
-// import mountainB from './assets/images/mountainB.png'
-
 function App() {
 
   const [moving,SetMoving] = useState(false)
@@ -37,16 +26,16 @@ function App() {
   const [section,setSection] = useState('Home')
   const [sectionNo,setSectionNo] = useState(1)
 
+  useEffect(()=>{
+      var audio = new Audio('https://vgmsite.com/soundtracks/super-mario-bros/jlgsgtpeof/01%20Running%20About.mp3');
+      audio.loop = true;
+      audio.play();
+  },[])
+
   const [alertMsg,setAlertMsg] = useState('');
   useEffect(()=>{
     setTimeout(()=>setAlertMsg(''),5000)
   },[alertMsg])
-
-  useEffect(()=>{
-    var audio = new Audio('https://vgmsite.com/soundtracks/super-mario-bros/jlgsgtpeof/01%20Running%20About.mp3');
-    audio.loop = true;
-    audio.play();
-  },[])
 
 
   document.onkeydown = function(e){
@@ -85,7 +74,7 @@ function App() {
     <>
       <TopStats sectionNo={sectionNo} section={section}/>
 
-      {alertMsg==''?<></>:<Alert msg={alertMsg}/>}
+      {alertMsg===''?<></>:<Alert msg={alertMsg}/>}
       
       <div className='screenConatiner'>
           <Waypoint
